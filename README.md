@@ -43,13 +43,6 @@ frida Hook 微信云函数脚本
 但是很多人都没有选择开源(至少我不知道有谁).
 
 开源不易, 可以的话支持以下
-# Hook_WeChat_FaaS
-frida Hook 微信云函数脚本
-
-
-测试环境:
-  微信安卓APP: 8.0.49
-  frida: 14.2.18
-
-启动方式:
-  frida -UF -l .\Hook_WeChat_FaaS.js com.tencent.mm --no-pause
+![](https://github.com/FourTwooo/Hook_WeChat_FaaS/blob/main/wx.jpg?raw=true)
+  
+QQ交流群: 1021904342
