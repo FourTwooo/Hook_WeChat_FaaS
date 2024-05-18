@@ -1,6 +1,7 @@
 # Hook_WeChat_FaaS
 frida Hook 微信云函数脚本
 
+![](https://raw.githubusercontent.com/FourTwooo/Hook_WeChat_FaaS/main/cesi.png)
 
 ## 环境
 
