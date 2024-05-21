@@ -1,7 +1,7 @@
 # Hook_WeChat_FaaS
 frida Hook 微信云函数脚本
 
-![](https://raw.githubusercontent.com/FourTwooo/Hook_WeChat_FaaS/main/cesi.png)
+![](https://raw.githubusercontent.com/FourTwooo/Hook_WeChat_FaaS/main/images/cesi.png)
 
 ## 环境
 
@@ -40,7 +40,7 @@ frida Hook 微信云函数脚本
 
 实际上并没有多少技术含量. 其实就是HOOK了 请求和响应的代码位置. 没有什么技术含量
 
-开源不易, 可以的话支持以下
-![](https://github.com/FourTwooo/Hook_WeChat_FaaS/blob/main/wx.jpg?raw=true)
+可以的话支持以下
+![](https://github.com/FourTwooo/Hook_WeChat_FaaS/blob/main/images/wx.jpg?raw=true)
   
 QQ交流群: 1021904342
