@@ -3,6 +3,8 @@ frida Hook 微信云函数脚本
 
 ![](https://raw.githubusercontent.com/FourTwooo/Hook_WeChat_FaaS/main/images/cesi.png)
 
+![](https://raw.githubusercontent.com/FourTwooo/Hook_WeChat_FaaS/main/images/pycesi.png)
+
 ## 环境
 
 开发测试环境. 理论来说 安卓APP应该是不限版本 通用的
@@ -13,6 +15,7 @@ frida Hook 微信云函数脚本
 
 - 微信安卓APP => 8.0.49
 
+python开发环境详见 requirements.txt
 
 
 ## 运行
