@@ -27,7 +27,7 @@ function CallWX(appid, jsapi_name, data) {
                     var name = field.getName();
                     var value = field.get(obj);
                     var type = field.getType();
-                    if (name === "C") {
+                    if (name === "C"){
                         return value
                     }
                     // console.log(type + " " + name + "=" + value);
@@ -57,7 +57,7 @@ function CallWX(appid, jsapi_name, data) {
                     let g = getFieldValue(mAppBrandDelegate, 'g')
                     dumpAllFieldValue(g)
                     let C = dumpAllFieldValue(g)
-                    if (C.toString() !== '{__APP__=true}') {
+                    if (C.toString() !== '{__APP__=true}'){
                         return;
                     }
                 } catch {
@@ -81,22 +81,54 @@ Java.perform(function () {
 
         let v = Java.use("com.tencent.mm.plugin.appbrand.v");
         v["getAppId"].implementation = function () {
-            AppId = this["getAppId"]();
+            if (Call_AppId === null) {
+                AppId = this["getAppId"]();
+            } else {
+                AppId = Call_AppId;
+            }
+            // result = 'wx3c12cdd0ae8b1a7b';
+            // console.log(`v.getAppId result=${result}`);
             return AppId;
         };
+
+        // let o0 = Java.use("com.tencent.mm.plugin.appbrand.jsapi.auth.o0");
+        // o0["d"].implementation = function (rdVar) {
+        //     console.log(`o0.d is called: rdVar=${rdVar}`);
+        //     this["d"](rdVar);
+        // };
+
+        // let AppBrandRuntime = Java.use("com.tencent.mm.plugin.appbrand.AppBrandRuntime");
+        // AppBrandRuntime["k0"].implementation = function (appBrandInitConfig) {
+        //     console.log(`AppBrandRuntime.k0 is called: appBrandInitConfig=${appBrandInitConfig}`);
+        //     this["k0"](appBrandInitConfig);
+        // };
+
 
         let AppBrandCommonBindingJni = Java.use("com.tencent.mm.appbrand.commonjni.AppBrandCommonBindingJni");
         AppBrandCommonBindingJni["nativeInvokeHandler"].implementation = function (jsapi_name, data, str3, asyncRequestCounter, z15) {
             CallWX_asyncRequestCounter = asyncRequestCounter;
-            console.log(`[${AppId}] [${asyncRequestCounter}] == \x1b[36m[requests]\x1b[0m: jsapi_name=${jsapi_name}, data=${data}, str3=${str3}, z15=${z15}`);
-
+            // console.log(`[${AppId}] [${asyncRequestCounter}] == \x1b[36m[requests]\x1b[0m: jsapi_name=${jsapi_name}, data=${data}, str3=${str3}, z15=${z15}`);
+            send(JSON.stringify({
+                type: 'requests',
+                AppId: AppId,
+                asyncRequestCounter: asyncRequestCounter,
+                jsapi_name: jsapi_name,
+                data: data,
+                str3: str3,
+                z15: z15
+            }))
             return this["nativeInvokeHandler"](jsapi_name, data, str3, asyncRequestCounter, z15);
         };
 
         let AppBrandJsBridgeBinding = Java.use('com.tencent.mm.appbrand.commonjni.AppBrandJsBridgeBinding');
         AppBrandJsBridgeBinding['invokeCallbackHandler'].implementation = function (asyncRequestCounter, res) {
-            console.log(`[${AppId}] [${asyncRequestCounter}] == \x1b[32m[response]\x1b[0m: ${res}`)
-
+            // console.log(`[${AppId}] [${asyncRequestCounter}] == \x1b[32m[response]\x1b[0m: ${res}`)
+            send(JSON.stringify({
+                type: 'response',
+                AppId: AppId,
+                asyncRequestCounter: asyncRequestCounter,
+                res: res
+            }))
             this['invokeCallbackHandler'](asyncRequestCounter, res)
         }
 
