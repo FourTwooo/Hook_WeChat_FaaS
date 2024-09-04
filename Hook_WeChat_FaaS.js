@@ -79,11 +79,11 @@ function CallWX(appid, jsapi_name, data) {
 
 Java.perform(function () {
 
-        let v = Java.use("com.tencent.mm.plugin.appbrand.v");
-        v["getAppId"].implementation = function () {
-            AppId = this["getAppId"]();
-            return AppId;
-        };
+        //let v = Java.use("com.tencent.mm.plugin.appbrand.v");
+        //v["getAppId"].implementation = function () {
+        //    AppId = this["getAppId"]();
+        //    return AppId;
+        //};
 
         let AppBrandCommonBindingJni = Java.use("com.tencent.mm.appbrand.commonjni.AppBrandCommonBindingJni");
         AppBrandCommonBindingJni["nativeInvokeHandler"].implementation = function (jsapi_name, data, str3, asyncRequestCounter, z15) {
