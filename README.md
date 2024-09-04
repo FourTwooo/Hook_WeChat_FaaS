@@ -7,7 +7,9 @@ frida Hook 微信云函数脚本
 
 ## 环境
 
-~~开发测试环境. 理论来说 安卓APP应该是不限版本 通用的~~(appid hook点并不是通用, 如果只是需要app抓包的需求只需要使用目录中的 Hook_WeChat_FaaS.js, 不要使用frida_js下的)
+~~开发测试环境. 理论来说 安卓APP应该是不限版本 通用的~~
+
+(appid hook点并不是通用, 如果只是需要app抓包的需求只需要使用目录中的 Hook_WeChat_FaaS.js, 不要使用frida_js下的)
 
  - Android => 10
 
