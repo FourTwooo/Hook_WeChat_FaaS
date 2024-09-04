@@ -1,9 +1,9 @@
 # Hook_WeChat_FaaS
 frida Hook 微信云函数脚本
 
-![](https://raw.githubusercontent.com/FourTwooo/Hook_WeChat_FaaS/main/images/cesi.png)
+![cesi](https://github.com/user-attachments/assets/99219d31-882f-4948-b124-09f7266c877c)
+![pycesi](https://github.com/user-attachments/assets/2be95b69-2773-4165-a8c9-8b2cc23b32e6)
 
-![](https://raw.githubusercontent.com/FourTwooo/Hook_WeChat_FaaS/main/images/pycesi.png)
 
 ## 环境
 
@@ -44,8 +44,8 @@ python开发环境详见 requirements.txt
 ## 支持
 
 实际上并没有多少技术含量. 其实就是HOOK了 请求和响应的代码位置. 没有什么技术含量
+QQ交流群: 1021904342
 
 可以的话支持以下
-![](https://github.com/FourTwooo/Hook_WeChat_FaaS/blob/main/images/wx.jpg?raw=true)
-  
-QQ交流群: 1021904342
+![wx](https://github.com/user-attachments/assets/a662b13e-d7b7-4130-b35b-cc1286e182b6)
+
