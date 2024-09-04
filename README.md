@@ -25,7 +25,7 @@ python开发环境详见 requirements.txt
 
 在小程序界面时运行以下命令或使用进程ID去运行
 ```
-    frida -UF -l .\Hook_WeChat_FaaS.js com.tencent.mm --no-pause
+    frida -UF -l .\Hook_WeChat_FaaS.js --no-pause
 ```
 
 ## 目前问题
