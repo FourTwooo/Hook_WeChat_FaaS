@@ -45,7 +45,7 @@ python开发环境详见 requirements.txt
 
 实际上并没有多少技术含量. 其实就是HOOK了 请求和响应的代码位置. 没有什么技术含量
 
-QQ交流群: 1021904342
+<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=6JWWosRVV0rtISqQKNVU5QY8KT0sBQP8&jump_from=webapi&authKey=kvD0trmJvJiWSeFVv1+WTUYBpalYGKh+dF3zgfpLDuByEmZF2wT8XXwC8QuT/tzQ"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="逆向交流学习" title="逆向交流学习"></a>    QQ交流群: 1021904342
 
 可以的话支持以下
 ![wx](https://github.com/user-attachments/assets/a662b13e-d7b7-4130-b35b-cc1286e182b6)
