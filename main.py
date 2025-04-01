@@ -34,14 +34,6 @@ class Frida_Server(DataStore):
         # 加载并运行脚本
         self.script.load()
 
-    def get_tencent_appBrand_pid(self):
-        for process in self.device.enumerate_processes():
-            print(process)
-            if "com.tencent.mm:appbrand" in process.name:
-                return process.pid
-
-        return None
-
     def on_message(self, message, data):
         if message['type'] == 'send':
             payload = json.loads(message['payload'])
